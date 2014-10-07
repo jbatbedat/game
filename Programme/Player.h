@@ -13,7 +13,7 @@ class Player
 public:
 
 Player();
-Player(int posX, int posY);
+Player(int posX=0, int posY=0);
 
 void load();
 void draw();
