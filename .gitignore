@@ -1,3 +1,5 @@
 *.[oa]
 *.depend
 Programme/obj
+Programme/bin
+Programme/Game
