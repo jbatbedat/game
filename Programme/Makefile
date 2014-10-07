@@ -8,7 +8,7 @@ OBJ = ./obj
 
 # Création de l'exécutable 'Game'
  
-all: create boucle.o draw.o event.o init.o Input.o main.o Player.o
+all: create boucle.o draw.o event.o init.o Input.o main.o Player.o map.o
 	$(CC) $(OBJ)/*.o -o $(DEST)/Game $(LDFLAGS)
  
 # Création du dossier bin (à condition que ce dernier n'existe pas déjà)
@@ -19,7 +19,7 @@ create:
  
  
 ############ Compilation de l'ensemble des fichiers ############
-main.o: ./main.cpp ./main.h ./globals.h
+main.o: ./main.cpp ./main.h ./map.h ./globals.h
 	$(CC) -c main.cpp -o $(OBJ)/main.o `sdl-config --cflags`
  
 boucle.o: ./boucle.cpp ./boucle.h
@@ -39,6 +39,9 @@ Input.o: ./Input.cpp ./Input.h ./globals.h
 
 Player.o: ./Player.cpp ./Player.h ./globals.h
 	$(CC) -c Player.cpp -o $(OBJ)/Player.o
+
+map.o: ./map.cpp ./map.h
+	$(CC) -c map.cpp -o $(OBJ)/map.o
  
 # Suppression des fichiers temporaires
 clean:
