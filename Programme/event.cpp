@@ -1,4 +1,5 @@
 #include "event.h"
+extern Player Player1;
 
 void touches()
 {
@@ -19,37 +20,37 @@ void touches()
                     // On fait correspondre les actions disponibles aux inputs. On switch en On les input correspondants aux touches enfoncées
                     if (event.key.keysym.sym == SDLK_x)
                         {
-                        Input1.m_quit=1;}
-                    if (event.key.keysym.sym == SDLK_ESCAPE)
+                        Player1.setm_input(1, 1);}
+                    if (event.key.keysym.sym == SDLK_SPACE)
                         {
-                        Input1.m_space=1;}
+                        Player1.setm_input(1, 2);}
                     if (event.key.keysym.sym == SDLK_UP)
                         {
-                        Input1.m_up=1;}
+                        Player1.setm_input(1, 3);}
                     if (event.key.keysym.sym == SDLK_DOWN)
                         {
-                        Input1.m_down=1;}
+                        Player1.setm_input(1, 4);}
                     if (event.key.keysym.sym == SDLK_RIGHT)
                         {
-                        Input1.m_right=1;}
+                        Player1.setm_input(1, 5);}
                     if (event.key.keysym.sym == SDLK_LEFT)
                         {
-                        Input1.m_left=1;}
+                        Player1.setm_input(1, 6);}
                     break;
 
             //On switch les input en off si les touches correspondantes ne sont pas enfoncées
             case SDL_KEYUP:
                 {
-                    if (event.key.keysym.sym == SDLK_ESCAPE)
-                        Input1.m_space=0;
+                    if (event.key.keysym.sym == SDLK_SPACE)
+                        Player1.setm_input(0, 2);
                     if (event.key.keysym.sym == SDLK_UP)
-                        Input1.m_up=0;
+                        Player1.setm_input(0, 3);
                     if (event.key.keysym.sym == SDLK_DOWN)
-                        Input1.m_down=0;
+                        Player1.setm_input(0, 4);
                     if (event.key.keysym.sym == SDLK_RIGHT)
-                        Input1.m_right=0;
+                        Player1.setm_input(0, 5);
                     if (event.key.keysym.sym == SDLK_LEFT)
-                        Input1.m_left=0;
+                        Player1.setm_input(0, 6);
                     break;
                 }
             }

@@ -17,3 +17,5 @@ int const tInterval=1*16;
 int rtCourse;
 int rtInterval;
 
+int rtSaut;
+int rtIntSaut;

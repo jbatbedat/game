@@ -26,7 +26,6 @@ extern bool done;
 extern void drawback();
 extern void drawsprites(SDL_Surface *sprite, int destX, int destY, int srcX, int srcY);
 extern SDL_Rect dstrect;
-extern Input Input1;
 extern int timer;
 extern void pause(void);
 

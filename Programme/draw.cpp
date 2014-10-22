@@ -10,7 +10,7 @@ void drawback()
         rect.x=Player1.get_m_posX()-20;
 	rect.y=5;
 	rect.h=600;
-	rect.w=600;
+	rect.w=640;
         // draw background
         SDL_BlitSurface(background, &rect, ecran, &dstrect);
         SDL_BlitSurface(backgroundClean, &rect, background, &rect);

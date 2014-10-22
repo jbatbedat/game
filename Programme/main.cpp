@@ -9,8 +9,6 @@
 
 #include "main.h"
 
-
-
 int main ( int argc, char** argv )
 {
 
@@ -25,7 +23,7 @@ Player1.load();
 
 // program main loop
 
-while (!Input1.m_quit)
+while (!Player1.getm_input("quit"))
 {
     //Gère les évènements (claviers et souris)
     touches();
@@ -33,9 +31,12 @@ while (!Input1.m_quit)
     //Affiche le background et les 2 sprites
 
     drawback();
-    Player1.draw();
+
     Player1.immobile();
+    Player1.vitesse();
     Player1.courir();
+    Player1.saut();
+    Player1.draw();
     //Met l'écran à jour
     SDL_Flip(ecran);
     pause();

@@ -44,7 +44,6 @@
 		<Unit filename="boucle.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
-		<Unit filename="cb.bmp" />
 		<Unit filename="draw.cpp" />
 		<Unit filename="draw.h">
 			<Option target="&lt;{~None~}&gt;" />
